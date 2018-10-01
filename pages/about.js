@@ -10,7 +10,7 @@ export default () => (
           <img src="https://kylenieberphotography.imgix.net/DSCF2715.jpg?auto=format&q=85&w=600" />
         </div>
         <div className="col-12 col-md-6">
-          <p>What's there to say? I am who I am .</p>
+          <p>What's there to say? I am who I am.</p>
         </div>
       </div>
     </div>
