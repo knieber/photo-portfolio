@@ -10,20 +10,24 @@ const links = [
 
 const Nav = () => (
   <nav className="site-header py-1 mt-5 mb-5">
-    <div className="container d-flex flex-column flex-md-row justify-content-between">
+    <div className="container d-flex flex-column flex-md-row">
       <Link prefetch href="/">
-        <a className="py-2">Home</a>
+        <a className="">home</a>
       </Link>
       <Link prefetch href="/about">
-        <a className="py-2">About</a>
+        <a className="">about</a>
       </Link>
     </div>
 
     <style jsx>{`
       :global(body) {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
+        font-family: 'Europa', sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        font-weight: 300;
+        font-style: normal;
+        color: #666;
       }
       nav {
         text-align: center;
