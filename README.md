@@ -115,9 +115,7 @@ We recommend keeping React components in `./components` and they should look lik
 ### `./components/simple.js`
 
 ```jsx
-const Simple = () => (
-  <div>Simple Component</div>
-)
+const Simple = () => <div>Simple Component</div>
 
 export default Simple // don't forget to export default!
 ```
@@ -129,10 +127,10 @@ import { Component } from 'react'
 
 class Complex extends Component {
   state = {
-    text: 'World'
+    text: 'World',
   }
 
-  render () {
+  render() {
     const { text } = this.state
     return <div>Hello {text}</div>
   }
@@ -148,7 +146,7 @@ You can fetch data in `pages` components using `getInitialProps` like this:
 ### `./pages/stars.js`
 
 ```jsx
-const Page = (props) => <div>Next stars: {props.stars}</div>
+const Page = props => <div>Next stars: {props.stars}</div>
 
 Page.getInitialProps = async ({ req }) => {
   const res = await fetch('https://api.github.com/repos/zeit/next.js')
@@ -197,8 +195,7 @@ app.prepare().then(() => {
     } else {
       handle(req, res, parsedUrl)
     }
-  })
-  .listen(3000, (err) => {
+  }).listen(3000, err => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
   })
@@ -221,11 +218,11 @@ To configure the syntax highlighting in your favorite text editor, head to the [
 
 2. Run `now` from your project directory. You will see a **now.sh** URL in your output like this:
 
-    ```
-    > Ready! https://your-project-dirname-tpspyhtdtk.now.sh (copied to clipboard)
-    ```
+   ```
+   > Ready! https://your-project-dirname-tpspyhtdtk.now.sh (copied to clipboard)
+   ```
 
-    Paste that URL into your browser when the build is complete, and you will see your deployed app.
+   Paste that URL into your browser when the build is complete, and you will see your deployed app.
 
 You can find more details about [`now` here](https://zeit.co/now).
 
